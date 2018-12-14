@@ -1,0 +1,33 @@
+\documentclass[18pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\begin{document}
+
+\section*{Aufgabe 2}
+Es sei $S_n = 11 + 13 + 15 + \cdots$ . Wie viele Zahlen muss man addieren, um mindestens 1.000.000 zu erhalten?\\[10pt]
+Es ist zu sehen, dass es sich hierbei um eine arithmetische Folge handelt. Man kann folgende Formeln verwenden:
+\begin{center}
+$\displaystyle \sum_{i=1}^{n} a_i = \frac{n}{2}(a_i +a_n)$ sowie $a_n = a_1 + (n-1) \cdot d$\\[5pt]
+\end{center}
+Der erste Summand der Reihe ist 11 und die Differenz zwischen den Summanden betr\"agt 2. Daraus folgt mit der Aufgabenstellung:
+\begin{equation*}
+S_n = \frac{n}{2}(11 +a_n) = \frac{n}{2}(11+11+(n-1)\cdot 2) \geq 1.000.000\\[5pt]
+\end{equation*}
+Da die Reihe monoton steigend ist betrachten wir nur den Fall $S_n = 1.000.000$ und w\"ahlen dann die n\"achst gr\"o{\ss}ere nat\"urliche Zahl aus. Aufgel\"ost erh\"alt man folgenden Gleichung:
+\begin{equation*}
+\begin{aligned}
+n^2 + 10n = 1.000.000\\
+n^2 + 10n - 1.000.000= 0\\
+\end{aligned}
+\end{equation*}
+Quadratische Gleichung, pq-Formel oder Mitternachtsformel benutzen
+\begin{equation*}
+\begin{aligned}
+\Rightarrow n_{1/2} = -5 \pm \sqrt{5^2 + 1.000.000}\\
+\Rightarrow n_{1} \approx 995,012
+\end{aligned}
+\end{equation*}
+\end{document}

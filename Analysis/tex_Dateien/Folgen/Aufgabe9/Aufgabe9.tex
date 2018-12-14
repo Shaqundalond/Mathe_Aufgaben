@@ -1,0 +1,28 @@
+\documentclass[18pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\begin{document}
+
+\section*{Aufgabe 9}
+Bestimmen Sie $\displaystyle \lim_{n \to \infty}\left( \sqrt{n^2 - n +1} - n \right) $\\
+\\
+Zun\"achst wird der Ausdruck mit Hilfe der 3. binomischen Formel erweitert. Dies ist die Standardvorgehensweise wenn man h\"assliche Wurzeln vor sich hat.
+\begin{align*}
+\sqrt{n^2 - n +1} - n &= \sqrt{n^2 - n +1} - n \cdot \frac{\sqrt{n^2 - n +1} + n}{\sqrt{n^2 - n +1} + n}\\[10pt]
+&=\frac{\left(\sqrt{n^2 - n +1} - n\right) \cdot \left(\sqrt{n^2 - n +1} + n\right)}{\sqrt{n^2 - n +1} + n}\\[10pt]
+&=\frac{n^2 - n + 1 -n^2}{\sqrt{n^2 - n +1} + n}\\[10pt]
+&=\frac{- n + 1}{\sqrt{n^2 - n +1} + n}
+\intertext{Dieser Ausdruck sieht auf den ersten Blick nicht besser aus wenn man ihn mit $\frac{1}{n}$ erweitert wird das ganze wieder sch\"oner}
+&=\frac{(- n + 1 )\cdot \frac{1}{n}}{\left(\sqrt{n^2 - n +1} + n\right) \cdot \frac{1}{n}}\\[10pt]
+&=\frac{- 1 + \frac{1}{n}}{ \frac{\sqrt{n^2 - n +1}}{n} + 1}
+\intertext{ersetzt man nun das n im Nenner durch $\sqrt{n^2}$ und zieht das in die Wurzel erh\"alt man folgenden Ausdruck}
+&=\frac{- 1 + \frac{1}{n}}{\sqrt{\frac{n^2}{n^2} - \frac{n}{n^2} + \frac{1}{n^2}} + 1}\\[10pt]
+&=\frac{- 1 + \frac{1}{n}}{\sqrt{1 - \frac{1}{n} + \frac{1}{n^2}} + 1}
+\end{align*}
+Hiervon kann man nun den Grenzwert bilden\\[10pt]
+$\displaystyle \lim_{n \to \infty}\left(\frac{- 1 + \frac{1}{n}}{\sqrt{1 - \frac{1}{n} + \frac{1}{n^2}} + 1}\right) = \frac{-1+0}{\sqrt{1 - 0 + 0}+1} = -\frac{1}{2}$
+
+\end{document}

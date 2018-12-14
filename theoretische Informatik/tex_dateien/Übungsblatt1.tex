@@ -1,0 +1,104 @@
+\documentclass[18pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+	\section*{Aufgabe1}
+	Es sei:\\
+	$A:= \{1,17,53\}$ \\
+	$B:= \{2,17,23\}$
+	\subsection*{a$)$ }
+	Berechne die Vereinigung $(\cup)$ von A und B\\
+	$A \cup B = \{1,17,53\} \cup \{2,17,23\} = \{1,2,17,23,53\} $
+	\subsection*{b$)$ }
+	Berechne den Schnitt $(\cap)$ von A und B\\
+	$A\cap B = \{1,17,53\} \cap \{2,17,23\} = \{17\} $
+	\subsection*{c$)$ }
+	\doublespacing
+	Berechne das kartesische Produkt $(\times)$ von A und B\\
+	$A\times B = \{1,17,53\} \times \{2,17,23\} = $\\
+	$\{(1,2),(1,17),(1,23),(17,2),(17,17),(17,23),(53,2),(53,17),(53,23)\} $\\
+	\singlespacing
+	\subsection*{d$)$ }
+	Berechne die Differenz $(\setminus)$ von A und B\\
+	$A\setminus B = \{1,17,53\} \setminus \{2,17,23\} = \{1,53\} $
+	
+	\section*{Aufgabe2}
+	\subsection*{a$)$ }
+	$\mathcal{P}(\emptyset) = \{\emptyset \} $\\
+	Die Potenzmenge der leeren Menge ist eine Menge welche die leere Menge als Element besitzt.\\
+	$\Longrightarrow\lvert\mathcal{P}(\emptyset)\rvert = 1$
+	\subsection*{b$)$ }
+	$\mathcal{P}(\mathcal{P}(\emptyset))$\\
+	Wir ersetzen die innere Potenzmenge nun mit der vorherig berechneten Potenzmenge\\
+	In Worten bestimmen wir die Potenzmenge der Ein-elementigen Menge mit der leeren Menge als Element.\\
+	$\mathcal{P}(\{\emptyset \}) = \{\emptyset , \{\emptyset \}\} $\\
+	$\Longrightarrow \lvert\mathcal{P}(\mathcal{P}(\emptyset))\rvert= \lvert\mathcal{P}(\{\emptyset \})\rvert = 2$\\
+	Es gilt im allg.: Die Potenzmenge einer einelementigen Mengen hat zwei Elemente. Einmal die leere Menge und die ganze Menge.\\
+
+
+	\subsection*{c$)$ }
+	$\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset)))$\\
+	Auch hier ersetzt man die inneren Potenzmengen durch die vorher berechnete Potenzmenge\\
+	
+	\begin{align*}
+	\mathcal{P}(\{\emptyset , \{\emptyset \}\} ) = \{ &\\
+	&\emptyset ,\\
+	&\{\emptyset\},\{\{\emptyset \}\},\\
+	&\{\emptyset , \{\emptyset \}\}\\
+	&\}
+	\end{align*}
+	$\Longrightarrow \lvert \mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset))) \rvert = \lvert\mathcal{P}(\{\emptyset , \{\emptyset \}\} )\rvert = 4$
+	
+	\subsection*{Bemerkung}
+	Es lohnt sich nicht die Potenzmengenfunktion von au{\ss}en nach innen aufzul\"osen.\\
+	Es gilt im allgemeinen \textbf{nicht}: $\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset))) = \{\emptyset , \mathcal{P}(\mathcal{P}(\emptyset)) \}$\\
+	Hier liegt eine verstecke Annahme drin, dass $\mathcal{P}(\mathcal{P}(\emptyset))$ eine einelementige Menge ist.\\
+	Eine g\"ultige Aussage lautet:\\
+	$\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset))) = \{\emptyset , \mathcal{P}(\mathcal{P}(\emptyset)) \} \cup \{$alle echten Teilmengen von $\mathcal{P}(\mathcal{P}(\emptyset))\setminus\emptyset\}$\\
+	Wenn wir dies weiteraufl\"osen wird das ganze sehr lang und kompliziert\\
+	$\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset))) = \{\emptyset , \{\emptyset , \mathcal{P}(\emptyset)\} \cup \{ $alle echten Teilmengen von $\mathcal{P}(\emptyset)\setminus\emptyset\}\} \cup \{$alle echten Teilmengen von $\mathcal{P}(\mathcal{P}(\emptyset))\setminus\emptyset\}$\\
+	
+	
+	\section*{Aufgabe 3}
+	\subsection*{a$)$}
+	Bestimme die Kardinalit\"at des Schnitts  $(\cap)$  von $\{x, y, z\}$ und $\{x, \{y, z\}, \{a\}\}$\\
+	$\lvert\{x, y, z\} \cap \{x, \{y, z\}, \{a\}\} \rvert = \lvert\{x{}\}\rvert = 1$
+	
+	\subsection*{b$)$}
+	Bestimme die Kardinalit\"at des kartesischen Produktes von $\mathbb{N} \cap \left[3,6 \right)$ und $\{5\}$\\
+	\doublespacing
+	$\mathbb{N} \cap \left[3,6 \right) = \{3,4,5\}$\\
+	$\{3,4,5\} \times \{5\}=\{(3,5),(4,5),(5,5)\}$\\
+	$\lvert \{(3,5),(4,5),(5,5)\} \rvert = 3$\\
+	Die Menge besteht aus 3 2-Tupeln
+	\singlespacing
+
+	\section*{Aufgabe 4}
+	\begin{center}
+	$M:= \{1,2,3,4,5\}$\newline
+	$R: = \{(1,2),(1,4),(2,4),(3,2),(3,4),(3,5),(5,2),(5,3),(5,4) \}$
+	\end{center}
+	\subsection*{reflexiv/irreflexiv}
+	Die Relation ist irreflexiv, da f\"ur alle Elemente m in M $(m,m)$ nicht in der Relation R ist und somit kann diese nicht reflexiv sein. Reflexiv und irreflexiv schlie{\ss}en sich gegenseitig aus. Eine Relation ist entweder reflexiv oder irreflexiv, bzw keines der beide.\\
+	\\
+	Es gilt: $\forall m \in M : (m,m) \notin R $
+	\subsection*{symetrisch}
+	Die Relation ist nicht symetrisch da $(2,4) \in R $ gilt, aber $(4,2) \notin R$ ist, was von der Symetrie gefordert ist.\\
+	\subsection*{antisymetrisch}
+	Die Relation ist nicht antisymetrisch da $\{(3,5),(5,3)\} \subset R$ gilt. Antisymetrie fordert, dass nur eines der beiden 2-Tupel in R liegt.\\
+	\subsection*{transitiv}
+	Die Relation ist nicht transitiv da $\{(3,5),(5,3)\} \subset R$ gilt aber $(3,3) \notin R$\\
+	\subsection*{total}
+	Die Relation ist nicht total, da Totalit\"at Reflexivit\"at fordert und die Relation wie oben beschrieben irreflexiv ist.
+	
+	\section*{Aufgabe 5}
+	\begin{center}
+		$R:=\{(x,y) \in \mathbb{N}\times\mathbb{N}\vert \exists z \in \mathbb{N}: y=z\cdot x \}$
+	\end{center}
+	Die Relation ist weder eine Halb- noch Totalordnung da sie nicht antisymetrisch ist.\\
+	Weder $(3,2)$ noch $(2,3)$ sind Elemente der Relation und somit ist diese nicht antisymetrisch und damit auch keine Halb- oder Totalordnung, da hier Antisymetrie gefordert wird
+		
+\end{document}

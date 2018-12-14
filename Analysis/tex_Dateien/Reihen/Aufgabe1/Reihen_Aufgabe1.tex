@@ -1,0 +1,41 @@
+\documentclass[18pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+%\usepackage[yyyymmdd]{datetime}
+%\renewcommand{\dateseparator}{}
+%\usepackage{datetime2}
+
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+\fancyhead[L]{Reihen} %Kopfzeile links
+\fancyhead[C]{Fabian Pfaff} %zentrierte Kopfzeile
+\fancyhead[R]{\today} %Kopfzeile rechts
+
+\begin{document}
+\subsection*{Aufgabe 1}
+Bestimmen Sie die Summe aller ungeraden dreistelligen Zahlen.\\
+\begin{equation}
+\displaystyle S_n = \sum_{i=1}^{n} a_i = \frac{n}{2}(a_1 +a_n)
+\end{equation}
+\begin{equation}
+a_n = a_1 + (n-1) \cdot d
+\end{equation}
+Es ist zu sehen, dass die erste dreistellige ungerade Zahl $a_1$ 101 ist und die letze Zahl $a_n$999 sowie dass die Differenz 2 beträgt. Hieraus kann man nun n mittels Gleichung (2) bestimmen.
+\begin{equation}
+\frac{a_n - a_1}{d} + 1 =n
+\end{equation}
+Daraus ergibt sich, dass $n=450$ ist.\\
+Mittels Gleichung (1)kann man nun die Summe berechnen\\
+\begin{equation*}
+S_n =\\
+\frac{n}{2}(a_1 +a_n)=\\
+\frac{450}{2}(101 +999)=\\
+247500
+\end{equation*}
+Die Summe aller ungeraden dreistelligen Zahlen beträgt \underline{247500}
+
+\end{document}

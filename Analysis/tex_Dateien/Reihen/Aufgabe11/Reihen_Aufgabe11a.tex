@@ -1,0 +1,97 @@
+\documentclass[18pt,a4paper]{article}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{animate}
+%\usepackage[yyyymmdd]{datetime}
+%\renewcommand{\dateseparator}{}
+%\usepackage{datetime2}
+
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+\fancyhead[L]{Reihen} %Kopfzeile links
+\fancyhead[C]{Fabian Pfaff} %zentrierte Kopfzeile
+\fancyhead[R]{\today} %Kopfzeile rechts
+\fancyfoot[L]{Reihen}
+\fancyfoot[C]{\thepage} %Seitennummer
+\fancyfoot[R]{\today}
+\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+
+\begin{document}
+\section*{Aufgabe 11a$)$}
+Bestimme die McLaurin-Reihe und den Konvergenzradius für
+\begin{equation*}
+f(x) = \frac{1}{^3\sqrt{1+x}} = (1+x)^{-\frac{1}{3}}
+\end{equation*}
+\subsection*{Bestimmung der McLaurin-Reihe}
+Zunächst berechnet man ein paar Ableitungen um ein Muster zu erkennen.
+\begin{align*}
+f^{(0)}(x) &=  (x+1)^{-\frac{1}{3}}  &f^{(0)}(0) &=  1\\
+f^{(1)}(x) &=  (-\frac{1}{3})\cdot (x+1)^{-\frac{4}{3}}  &f^{(1)}(0) &=  (-\frac{1}{3}) \\
+f^{(2)}(x) &=  (-\frac{1}{3})\cdot(-\frac{4}{3})\cdot (x+1)^{-\frac{7}{3}}   &f^{(2)}(0) &= (-\frac{1}{3})\cdot(-\frac{4}{3}) \\
+f^{(3)}(x) &=  (-\frac{1}{3})\cdot(-\frac{4}{3})\cdot(-\frac{7}{3})\cdot (x+1)^{-\frac{10}{3}}  &f^{(3)}(0) &= (-\frac{1}{3})\cdot(-\frac{4}{3})\cdot(-\frac{7}{3}) \\
+%f^{(4)}(x) &=   (-\frac{1}{3})\cdot %(-\frac{4}{3})\cdot(-\frac{7}{3})\cdot(-\frac{10}{3})\cdot (x+1)^{-\frac{10}{3}}  %&f^{(4)}(0) &= (-\frac{1}{3})\cdot (-\frac{4}{3})\cdot(-\frac{7}{3})\cdot(-\frac{10}{3}) \\
+\end{align*}
+Folgende Muster kann man erkennen
+\begin{comment}
+Hier ist nun zu sehen, dass für eine gerade Ableitung das Ergebnis postiv ist und für ungerade Ableitungen negativ. Weiterhin wird in der n-ten Ableitung mit n Brüchen multipliziert bei denen der Nenner jeweils 3 ist und in den Zählern die Folge: (1+3(n-1)). Mit diesen Eigenschaften ist es möglich ein allgemeines Produkt für die Werte an der Stelle eins zu berechnen.
+\end{comment}
+\begin{itemize}
+	\item Es ist zu erkennen, dass für gerade Ableitungen das Vorzeichen positiv ist und für ungerade Ableitungen negativ. Folglich benötigen wir den Term $(-1)^n$ um dies zu erzeugen
+	\item In der n-ten Ableitung wird mit n "Dritteln" multipliziert. Die Zähler sind zunächst egal. Aus diesem Muster können wir schließen, dass der Ausdruck $3^n$ im Nenner stehen hat.
+	\item Die Zähler bilden eine Folge (1, 1, 4, 7, 10, \dots) und werden miteinander multipliziert. Ignoriert man das nullte Folgenglied so erhält man folgenden expliziten Ausdruck: $a_n = (1+3(j-1))$ Dies wird nun in ein Produktzeichen das alle Folgenglieder von 1 bis n multipliziert.
+	\item Dieses Produktzeichen in Gleichung (1) hat jetzt aber ein Problem. Was passiert mit der 0-ten Ableitung. Es soll das Produkt der Folgenglieder von 1 bis 0 berechnet werden. Dies ist ein Sonderfall, wenn die obere Grenze kleiner ist als der Startwert ist, und wird '\textbf{leeres Produkt}' genannt. Mit dem Ergebnis von 1. Damit erzeugt das Produkt die Zähler der Ableitung.
+\end{itemize}
+Mit all diesen Mustern erhält man folgende Gleichung:
+\begin{equation}
+f^{(n)}(0)= \frac{(-1)^n}{3^n}\cdot\prod_{j=1}^{n}\Big(1+3(j-1)\Big)
+\end{equation}
+\begin{comment}
+Das allgemeine Produkt sieht etwas hässlich und ungewohnt aus. Die erste Frage die man bei sich bei genauerem beobachten stellt. Was zum Fick soll das Produkt von 1 bis n sein, für n=0. Das ist ein Sonderfall des Produktes. Ist die obere Grenze größer als der Startwert des Iterators i, so nennt der Mathematiker dies 'leeres Produkt' und dieses wurde definiert mit dem Ergebnis 1. (eine hässliche Googlesuche hat das ergeben). Im Produkt selbst wird nun die oben erwähnte Folge eingesetzt. Der Iterator wird deswegen um 1 nach hinten verschoben\\
+\end{comment}
+Nun lässt sich das ganze in die Definition der McLaurin-Reihe einsetzen.
+\begin{equation*}
+\sum_{i=0}^{n}\frac{f^{(i)}(0)}{i!}\cdot x^i = \sum_{i=0}^{n}\bigg(x^i \cdot \underbrace{ \frac{1}{i!} \cdot \frac{(-1)^i}{3^i}\cdot\prod_{j=1}^{i}\Big(1+3(j-1)\Big)}_\text{$a_i$} \bigg)
+\end{equation*}
+Jetzt werden die ersten 3 $a_i$ berechnet
+\begin{align*}
+i=0: a_0 &= \frac{1}{0!} \cdot \frac{(-1)^0}{3^0}\cdot\prod_{j=1}^{0}\Big(1+3(j-1)\Big)\\
+\quad &= 1 \cdot 1 \cdot 1 = 1\\
+%
+i=1: a_1 &= \frac{1}{1!} \cdot \frac{(-1)^1}{3^1}\cdot\prod_{j=1}^{1}\Big(1+3(j-1)\Big)\\
+\quad &= 1 \cdot -\frac{1}{3} \cdot (1+3(1-1)) = -\frac{1}{3}\\
+%
+i=2: a_2 &= \frac{1}{2!} \cdot \frac{(-1)^2}{3^2}\cdot\prod_{j=1}^{2}\Big(1+3(j-1)\Big)\\
+\quad &= \frac{1}{2} \cdot \frac{1}{9} \cdot (1+3(1-1))\cdot(1+3(2-1)) = \frac{1\cdot4}{2\cdot 9} = \frac{2}{9}\\
+&\vdots
+\end{align*}
+\subsection*{Konvergenzradius}
+Um den Konvergenzradius zu berechnen, muss man nun den oben genannten Ausdruck für $a_i$ in die folgende Gleichung(Quotientenkriterium) einsetzen.
+\begin{equation*}
+r = \lim_{n \to \infty}\left(\left|\frac{a_n}{1}\cdot \frac{1}{a_{n+1}}\right|\right)
+\end{equation*}
+Dadurch erhält man:
+\begin{equation*}
+\lim_{n \to \infty}\left(\left|\frac{(-1)^n \cdot\displaystyle\prod_{j=1}^{n}\Big(1+3(j-1)\Big)}{3^n \cdot n!} \cdot \frac{3^{n+1} \cdot (n+1)!}{(-1)^{n+1} \cdot\displaystyle\prod_{j=1}^{n+1}\Big(1+3(j-1)\Big)}\right|\right)
+\end{equation*}
+Zunächst können wir die $(-1)^n$ Terme entfernen, da uns nur positive Ergebnisse Intessieren. Weiterhin kürzen wir $3^n$ und $3^{n+1}$ sowie die Fakultäten.
+\begin{equation*}
+\frac{\displaystyle\prod_{j=1}^{n}\Big(1+3(j-1)\Big) \cdot 3 \cdot (n+1)}{\displaystyle\prod_{j=1}^{n+1}\Big(1+3(j-1)\Big)}
+=
+\frac{\displaystyle\prod_{j=1}^{n}\Big(1+3(j-1)\Big) \cdot 3 \cdot (n+1)}{\displaystyle\prod_{j=1}^{n}\Big(1+3(j-1)\Big)\cdot (1+3((n+1)-1))}
+\end{equation*}
+Jetzt kürzt man die Produkte miteinander. Sie haben die selben Faktoren. Im Nenner bleibt aber der letzte Faktor übrig.\\
+\begin{equation*}
+r = \lim_{n \to \infty}\left(\frac{3(n+1 )}{1+3((n+1)-1)}\right) = \lim_{n \to \infty}\left(\frac{3n +3}{3n+1}\right)=\lim_{n \to \infty}\left(\frac{3+\frac{3}{n}}{3+\frac{1}{n}}\right)=1
+\end{equation*}
+
+\animategraphics[height=2.8in,autoplay,controls]{12}{Aufgabe11\_images/test}{00}{29}
+
+\end{document}

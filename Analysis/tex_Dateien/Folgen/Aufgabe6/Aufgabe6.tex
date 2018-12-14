@@ -1,0 +1,53 @@
+\documentclass[18pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\setlength{\tabcolsep}{0.1em}
+\begin{document}
+
+\section*{Aufgabe 6}
+\subsection*{Monotonie}
+F\"ur diese Aufgabe werden zwei mathematische "Tricks" ben\"otigt um diese zu l\"osen. \\
+Im Folgenden steht die allgemeine Beschreibung der Folge f\"ur $a_{n}$ und $a_{n+1}$.\\
+\doublespacing
+\begin{tabular}{cccccccccccccc}
+		$a_{n+1} =$&& &$\frac{1}{(n+1)+1}$&$+$&$\frac{1}{(n+1)+2}$&$+$& $\dots$&$+$&$\frac{1}{2(n+1)-2}$&$+$&$\frac{1}{2(n+1)-1}$&$+$&$\frac{1}{2(n+1)}$  \\
+	$a_n =$&$\frac{1}{n+1}$&$+$&$\frac{1}{n+2}$&$+$&$\frac{1}{n+3}$&$+$& $\dots$&$+$&$\frac{1}{2n}$&&  &  &  \\ 
+
+\end{tabular} 
+\singlespacing
+\noindent Durch geschicktes \"Ubereinanderschreiben erkennt man, dass sich die Folgenglieder Terme teilen. Dies ist der \textbf{erste Trick} $($\"Ubereinanderschreiben$)$  und nutzen diesen nun prompt aus wenn wir $a_{n+1} - a_{n}$ berechnen.\\
+Man erkennt dass sich fast alle Terme aufheben. Es bleibt dann folgender Ausdruck \"ubrig\\
+\begin{center}
+$a_{n+1} - a_n = \frac{1}{2(n+1)} + \frac{1}{2n +1} - \frac{1}{n+1}$\\
+\end{center}
+Zu sehen ist, dass von $a_{n+1} $ nur die letzen beiden Terme und von $a_n$ nur der erste Term \"ubrig bleibt. Nun wird alles auf einen Nenner gebracht.
+\begin{center}
+	\doublespacing
+	$a_{n+1} - a_n = \frac{2n+1}{2(n+1)(2n+1)} + \frac{2(n+1)}{2(n+1)(2n+1)} - \frac{2(2n+1)}{2(n+1)(2n+1)}$\\
+	$a_{n+1} - a_n = \frac{2n + 2 + 2n +1 -(4n +2)}{2(n+1)(2n+1)}$\\
+		$a_{n+1} - a_n = \frac{1}{2(n+1)(2n+1)}$
+\end{center}
+Mit dieser Gleichung k\"onnen wir nun argumentieren, dass die Folge streng monoton steigt. Da sie f\"ur alle nat\"urliche Zahlen immer positiv ist.
+
+\subsection*{Beschr\"anktheit}
+Der \textbf{zweite Trick} ist es die einzelnen Terme der Reihe nach oben abzusch\"atzen. Der gr\"o{\ss}te Term in der Reihe ist immer der erste mit $\frac{1}{n+1}$\\
+\\
+Wir sch\"atzen nun die Reihe $R_1 = \displaystyle\sum_{i=n+1}^{2n} \frac{1}{i}$ $($Die Reihe welche unsere Folgenglieder erzeugt$)$ mit der Reihe $R_2 = \displaystyle\sum_{i=n+1}^{2n} \frac{1}{n+1}$ ab. 
+
+\begin{center}
+\begin{tabular}{cccccccccc}
+	\doublespacing
+	$R_1 =$&$\frac{1}{n+1}$&$+$&$\frac{1}{n+2}$&$+$&$\frac{1}{n+3}$&$+$& $\dots$&$+$&$\frac{1}{2n}$  \\ 
+	$R_2 =$&$\frac{1}{n+1}$&$+$&$\frac{1}{n+1}$&$+$& $\frac{1}{n+1}$&$+$&$\dots$&$+$&$\frac{1}{n+1}$ \\
+\end{tabular} 
+\end{center}
+
+\noindent F\"ur $R_2$ gilt nun dass wir den Term $\frac{1}{n+1}$, $(2n - (n+1) + 1)$ mal aufsummieren. Dadurch l\"asst sich $R_2$ folgend aufschreiben:
+\begin{center}
+$R_2 = \frac{1}{n+1}(2n - (n+1) + 1) = \frac{1}{n+1}(n) = \frac{n}{n+1}$
+\end{center}
+Dieser Ausdruck ist immer kleiner als 1 somit ist unsere Folge mit 1 nach oben beschr\"ankt.
+\end{document}

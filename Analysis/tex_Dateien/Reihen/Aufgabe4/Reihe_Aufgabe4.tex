@@ -1,0 +1,55 @@
+\documentclass[18pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\begin{document}
+
+\section*{Aufgabe 4}
+Bei allen Aufgaben handelt es sich um eine geometrische Reihe weswegen folgende Gleichung verwendet werden kann:
+\begin{equation}
+\sum_{i=0}^{n}a_i = a_0 \cdot \frac{1-q^n}{1-q}
+\end{equation}
+Achtung $a_0$ bezeichnet hier den \textbf{ersten} Summand der jeweiligen Reihe.
+\subsection*{a$)$}
+Bestimmen Sie $\displaystyle \lim_{n \to \infty}\left(\sum_{i=0}^{n}\left(\frac{1}{3}\right)^i\right) $\\[5pt]
+Der erste Summand dieser Reihe ist $a_0 = \left(\frac{1}{3}\right)^0 = 1$ und $ q = \frac{1}{3}$ Dadurch ergibt sich f\"ur die Aufgabe mit Gleichung $(1)$:\\[5pt]
+\begin{align*}
+\displaystyle \lim_{n \to \infty}\left(\sum_{i=0}^{n}\left(\frac{1}{3}\right)^i\right) &= \lim_{n \to \infty}\left(1 \cdot \frac{1-\left(\frac{1}{3}\right)^n}{1-\frac{1}{3}}\right)\\[5pt]
+&=\lim_{n \to \infty}\left(1 \cdot \frac{1-\left(\frac{1}{3}\right)^n}{\frac{2}{3}}\right)\\[5pt]
+&= 1 \cdot \frac{1}{\frac{2}{3}}\\[5pt]
+&= \frac{3}{2}
+\end{align*}
+
+\subsection*{b$)$}
+Bestimmen Sie $\displaystyle \lim_{n \to \infty}\left(\sum_{i=2}^{n}\left(\sqrt{a}\right)^i\right) $ f\"ur $0 \leq a < 1$\\[5pt]
+Der erste Summand dieser Reihe ist $a_2 = \left(\sqrt{a}\right)^2 = a$ und $ q = \sqrt{a}$ Dadurch ergibt sich f\"ur die Aufgabe mit Gleichung $(1)$:\\[5pt]
+\begin{align*}
+\displaystyle \lim_{n \to \infty}\left(\sum_{i=2}^{n}\left(\sqrt{a}\right)^i\right) &=\lim_{n \to \infty}\left(a \cdot \frac{1-\left(\sqrt{a}\right)^n}{1-\sqrt{a}}\right)
+\end{align*}
+Da die Wurzel einer Zahl kleiner 1 auch kleiner 1 ist strebt $\sqrt{a}^n$ f\"ur $n\to \infty$ gegen 0
+\begin{equation*}
+\displaystyle \lim_{n \to \infty}\left(\sum_{i=2}^{n}\left(\sqrt{a}\right)^i\right) = \frac{a}{1-\sqrt{a}}
+\end{equation*}
+
+\subsection*{c$)$}
+Bestimmen Sie $\displaystyle \lim_{n \to \infty}\left(\sum_{i=1}^{n}\left(a^i + b^i\right)\right) $ f\"ur $-1 < a,b < 1$\\[5pt]
+Zun\"achst schreiben wir die Summe auf und Ordnen diese danach geschickt an
+\begin{align*}
+\displaystyle \sum_{i=1}^{n}\left(a^i + b^i\right) &= a^1 + b^1 + a^2 +b^2 + \dots + a^n + b^n\\[5pt]
+&= \underbrace{a^1+a^2+\cdots + a^n}_\text{$\displaystyle \sum_{i=1}^{n}a^i$}+  \underbrace{b^1+b^2+\cdots + b^n}_\text{$\displaystyle \sum_{i=1}^{n}b^i $}\\[5pt]
+&= \sum_{i=1}^{n}a^i + \sum_{i=1}^{n}b^i 
+\end{align*}
+Wir haben nun zwei geometrische Reihen deren Grenzwerte wir nun mit Gleichung (1) bestimmen k\"onnen. Die ersten Summanden sind $a_1 = a^1 = a$ und $b_1 = b^1 = b$ sowie $q_a = a$ und $q_b = b$
+\begin{align*}
+\displaystyle \lim_{n \to \infty}\left(\sum_{i=1}^{n}\left(a^i + b^i\right)\right) &= \lim_{n \to \infty}\left(\sum_{i=1}^{n}\left(a^i \right)\right) + \lim_{n \to \infty}\left(\sum_{i=1}^{n}\left(b^i\right)\right)\\
+&=\lim_{n \to \infty} \left(a \cdot \frac{1-a^n}{1-a} \right) + \lim_{n \to \infty} \left(b \cdot \frac{1-b^n}{1-b} \right)
+\end{align*}
+Aus der Aufgabe geht hervor, dass $\vert a \vert,\vert b \vert < 1 $ ist. Somit streben $a^n$ und $b^n$ f\"ur $n \to \infty$ gegen 0.
+\begin{equation*}
+\displaystyle \lim_{n \to \infty}\left(\sum_{i=1}^{n}\left(a^i + b^i\right)\right) = \frac{a}{1-a} + \frac{b}{1-b}
+\end{equation*}
+
+
+\end{document}
