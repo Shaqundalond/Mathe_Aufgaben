@@ -1,8 +1,27 @@
 \documentclass[18pt,a4paper]{article}
+\usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
 \usepackage{setspace}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+%\usepackage[yyyymmdd]{datetime}
+%\renewcommand{\dateseparator}{}
+%\usepackage{datetime2}
+
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+\fancyhead[L]{Reihen} %Kopfzeile links
+\fancyhead[C]{Fabian Pfaff} %zentrierte Kopfzeile
+\fancyhead[R]{\today} %Kopfzeile rechts
+\fancyfoot[L]{Reihen}
+\fancyfoot[C]{\thepage} %Seitennummer
+\fancyfoot[R]{\today}
+\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
 
 \begin{document}
 	\section*{Aufgabe1}
@@ -53,52 +72,79 @@
 	$\Longrightarrow \lvert \mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset))) \rvert = \lvert\mathcal{P}(\{\emptyset , \{\emptyset \}\} )\rvert = 4$
 	
 	\subsection*{Bemerkung}
-	Es lohnt sich nicht die Potenzmengenfunktion von au{\ss}en nach innen aufzul\"osen.\\
+	Es lohnt sich nicht die Potenzmengenfunktion von außen nach innen aufzulösen.\\
 	Es gilt im allgemeinen \textbf{nicht}: $\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset))) = \{\emptyset , \mathcal{P}(\mathcal{P}(\emptyset)) \}$\\
 	Hier liegt eine verstecke Annahme drin, dass $\mathcal{P}(\mathcal{P}(\emptyset))$ eine einelementige Menge ist.\\
-	Eine g\"ultige Aussage lautet:\\
+	Eine gültige Aussage lautet:\\
 	$\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset))) = \{\emptyset , \mathcal{P}(\mathcal{P}(\emptyset)) \} \cup \{$alle echten Teilmengen von $\mathcal{P}(\mathcal{P}(\emptyset))\setminus\emptyset\}$\\
-	Wenn wir dies weiteraufl\"osen wird das ganze sehr lang und kompliziert\\
+	Wenn wir dies weiterauflösen wird das ganze sehr lang und kompliziert\\
 	$\mathcal{P}(\mathcal{P}(\mathcal{P}(\emptyset))) = \{\emptyset , \{\emptyset , \mathcal{P}(\emptyset)\} \cup \{ $alle echten Teilmengen von $\mathcal{P}(\emptyset)\setminus\emptyset\}\} \cup \{$alle echten Teilmengen von $\mathcal{P}(\mathcal{P}(\emptyset))\setminus\emptyset\}$\\
 	
 	
 	\section*{Aufgabe 3}
 	\subsection*{a$)$}
-	Bestimme die Kardinalit\"at des Schnitts  $(\cap)$  von $\{x, y, z\}$ und $\{x, \{y, z\}, \{a\}\}$\\
+	Bestimme die Kardinalität des Schnitts  $(\cap)$  von $\{x, y, z\}$ und $\{x, \{y, z\}, \{a\}\}$\\
 	$\lvert\{x, y, z\} \cap \{x, \{y, z\}, \{a\}\} \rvert = \lvert\{x{}\}\rvert = 1$
 	
 	\subsection*{b$)$}
-	Bestimme die Kardinalit\"at des kartesischen Produktes von $\mathbb{N} \cap \left[3,6 \right)$ und $\{5\}$\\
+	Bestimme die Kardinalität des kartesischen Produktes von $\mathbb{N} \cap \left[3,6 \right)$ und $\{5\}$\\
 	\doublespacing
 	$\mathbb{N} \cap \left[3,6 \right) = \{3,4,5\}$\\
 	$\{3,4,5\} \times \{5\}=\{(3,5),(4,5),(5,5)\}$\\
 	$\lvert \{(3,5),(4,5),(5,5)\} \rvert = 3$\\
 	Die Menge besteht aus 3 2-Tupeln
 	\singlespacing
-
+	\newpage
 	\section*{Aufgabe 4}
 	\begin{center}
 	$M:= \{1,2,3,4,5\}$\newline
 	$R: = \{(1,2),(1,4),(2,4),(3,2),(3,4),(3,5),(5,2),(5,3),(5,4) \}$
 	\end{center}
 	\subsection*{reflexiv/irreflexiv}
-	Die Relation ist irreflexiv, da f\"ur alle Elemente m in M $(m,m)$ nicht in der Relation R ist und somit kann diese nicht reflexiv sein. Reflexiv und irreflexiv schlie{\ss}en sich gegenseitig aus. Eine Relation ist entweder reflexiv oder irreflexiv, bzw keines der beide.\\
+	Die Relation ist irreflexiv, da für alle Elemente m in M $(m,m)$ nicht in der Relation R ist und somit kann diese nicht reflexiv sein. Reflexiv und irreflexiv schließen sich gegenseitig aus. Eine Relation ist entweder reflexiv oder irreflexiv, bzw keines der beide.\\
 	\\
 	Es gilt: $\forall m \in M : (m,m) \notin R $
 	\subsection*{symetrisch}
 	Die Relation ist nicht symetrisch da $(2,4) \in R $ gilt, aber $(4,2) \notin R$ ist, was von der Symetrie gefordert ist.\\
 	\subsection*{antisymetrisch}
-	Die Relation ist nicht antisymetrisch da $\{(3,5),(5,3)\} \subset R$ gilt. Antisymetrie fordert, dass nur eines der beiden 2-Tupel in R liegt.\\
+	Die Relation ist nicht antisymetrisch da $\{(3,5),(5,3)\} \subset R$ gilt. Antisymetrie fordert, dass maximal nur eines der beiden 2-Tupel in R liegt.\\
 	\subsection*{transitiv}
 	Die Relation ist nicht transitiv da $\{(3,5),(5,3)\} \subset R$ gilt aber $(3,3) \notin R$\\
 	\subsection*{total}
-	Die Relation ist nicht total, da Totalit\"at Reflexivit\"at fordert und die Relation wie oben beschrieben irreflexiv ist.
-	
+	Die Relation ist nicht total, da Totalität Reflexivität fordert und die Relation wie oben beschrieben irreflexiv ist.
+	\newpage
 	\section*{Aufgabe 5}
 	\begin{center}
 		$R:=\{(x,y) \in \mathbb{N}\times\mathbb{N}\vert \exists z \in \mathbb{N}: y=z\cdot x \}$
 	\end{center}
-	Die Relation ist weder eine Halb- noch Totalordnung da sie nicht antisymetrisch ist.\\
-	Weder $(3,2)$ noch $(2,3)$ sind Elemente der Relation und somit ist diese nicht antisymetrisch und damit auch keine Halb- oder Totalordnung, da hier Antisymetrie gefordert wird
+	\subsection*{Halbordnug}
+	\subsubsection*{Reflexiv}
+	Die Relation ist reflexiv da für z=1 gilt $(x,x) \in R \quad \forall x \in \mathbb{N}$
+	\subsubsection*{Antisymetrie}
+	Seien $(m_1,m_2),(m_2,m_1) \in R$ Dadurch folgt dass zwei ganze Zahlen mit denen gilt:
+	\begin{equation*}
+	m_2 = z_1 \cdot m_1 \quad m_1=z_2\cdot m_2
+	\end{equation*}
+	Setzt man nun die rechte Gleichung in die linke ein erhält man folgenden Ausdruck:
+	\begin{align*}
+	m_2 &= z_1 \cdot z_2\cdot m_2 \quad |:m_2\\
+	1&= z_1 \cdot z_2
+	\end{align*}
+	Da aber $z_1$ und $z_2$ ganze Zahlen sind, muss $1= z_1 = z_2$ gelten und daher $m_2 = m_1$. Was der Definition der Antisymetrie entspricht.
+	\subsubsection*{Transitivität}
+	Seien $(m_1,m_2),(m_2,m_3) \in R$ Daraus folgen folgende Aussagen:
+	\begin{align*}
+	m_2 &= z_1 \cdot m_1\\
+	m_3 &= z_2 \cdot m_2
+	\intertext{Setzt man nun die obere Gleichung in die untere ein erhält man}
+	m_3 &= z_2 \cdot z_1\cdot m_1
+	\end{align*}
+	Wenn man zwei ganze Zahlen miteinander multipliziert ergibt dies eine weitere ganze Zahl (förmlich ausgedrückt: Die ganzen Zahlen sind unter Multiplikation geschlossen) und somit ist die Transitivität erfüllt.
+	
+	Die Relation ist somit eine \textbf{Halbordnung}.
+	\subsection*{Totalordnung}
+	Die Halbordnung wurde schon bewiesen. Es fehlt nur noch die Totalität.
+	\subsubsection*{Totalität.}
+	Die Relation ist nicht total,da weder (5,3) noch (3,5) Element von R ist. Somit ist die Relation \textbf{keine Totalordnung}
 		
 \end{document}

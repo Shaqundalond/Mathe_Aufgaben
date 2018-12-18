@@ -7,7 +7,10 @@ Reihen Aufgabe 11b|
 Reien Aufgabe 15   |
 #### Theo. Inf 10.12.2018
 
--[x] [Übungsblatt 1](/theoretische%20Informatik/pdf/%C3%9Cbungsblatt1.pdf) *hochgeladen am: 14.12.2018*<br />
+-[x] [Übungsblatt 1](/theoretische%20Informatik/pdf/%C3%9Cbungsblatt1.pdf) *hochgeladen am: 14.12.2018* updated am: *18.12.2018*<br />
+Mir ist ein Fehler in der Aufgabe 5 unterlaufen. Ich habe ihn korrigiert und die Aufgabe sollte nun korrekt sein. Falls sich mich weitere Fehler
+eingeschlichen haben bitte bei mir melden.
+
 #### Analysis Aufgaben 17.12.2018
 
 -[ ] Reihen Aufgabe 10 <br />
