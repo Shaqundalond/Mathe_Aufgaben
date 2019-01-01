@@ -1,0 +1,62 @@
+\documentclass[18pt,a4paper]{article}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[left=2cm, top=3cm, right=2cm, bottom=1.5cm]{geometry}
+%\usepackage[yyyymmdd]{datetime}
+%\renewcommand{\dateseparator}{}
+%\usepackage{datetime2}
+
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+\fancyhead[L]{Reihen} %Kopfzeile links
+\fancyhead[C]{Fabian Pfaff} %zentrierte Kopfzeile
+\fancyhead[R]{\today} %Kopfzeile rechts
+\fancyfoot[L]{Reihen}
+\fancyfoot[C]{\thepage} %Seitennummer
+\fancyfoot[R]{\today}
+\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+
+\begin{document}
+\section*{Aufgabe 10}
+Bestimmen Sie einige Summanden der Taylor-Reihe von $f(x)=\sqrt{x} = x^{\frac{1}{2}}$ um die Stelle $x_0 = 1$
+\begin{equation}
+Tf(x;x_0)= \sum_{n=0}^{\infty}\frac{f^{(n)}(x_0)}{n!} \cdot (x-x_0)^n \qquad\forall x,x_0 \in \mathbb{C}
+\end{equation}
+$x_0$ ist hierbei die Entwicklungsstelle. In der Mathemathik wird gerne $x_0$ verwendet um eine beliebige Zahl zu verwenden, die aber konstant bleibt
+\begin{equation}
+\binom{q}{n} = \frac{\prod_{i=0}^{n-1}(q-i)}{n!} \qquad \qquad \forall q \in \mathbb{R},\forall n \in \mathbb{N}
+\end{equation}
+\subsection*{Ableitungen}
+\begin{align*}
+&f^{(0)}(x_0) =& &(x_0)^{\frac{1}{2}}
+&f^{(0)}(1) =& 1\\
+&f^{(1)}(x_0) =& (\frac{1}{2})\cdot&(x_0)^{-\frac{1}{2}}
+&f^{(1)}(1) =& (\frac{1}{2})\\
+&f^{(2)}(x_0) =& (-\frac{1}{2})\cdot(\frac{1}{2})\cdot&(x_0)^{-\frac{3}{2}}
+&f^{(2)}(1) =& (\frac{1}{2})\cdot(-\frac{1}{2})\\
+&f^{(3)}(x_0) =& (-\frac{3}{2})\cdot(-\frac{1}{2})\cdot(\frac{1}{2})\cdot&(x_0)^{-\frac{5}{2}}
+&f^{(3)}(1) =& (\frac{1}{2})\cdot(-\frac{1}{2})\cdot(-\frac{3}{2})\\
+\end{align*}
+\subsection*{Taylor-Reihe}
+Es ist nun zu sehen dass  $f^{(n)}(1)$ sich durch folgenden Ausdruck berechnen lässt.
+\begin{equation}
+f^{(n)}(1) = \prod_{i=0}^{n-1}\left(\frac{1}{2}-i\right)
+\end{equation}
+Setzen wir nun Gleichung 3 in Gleichung 1 ein erhalten wir folgendenden Ausdruck:
+\begin{equation}
+Tf(x;1)= \sum_{n=0}^{\infty}\frac{\prod_{i=0}^{n-1}\left(\frac{1}{2}-i\right)}{n!} \cdot (x-1)^n
+\end{equation}
+Hier ist nun zu erkennen dass der Bruch sich mittels Gleichung 2 vereinfachen lässt, zu
+\begin{equation*}
+Tf(x;1)= \sum_{n=0}^{\infty}\binom{1/2}{n} \cdot (x-1)^n
+\end{equation*}
+Hierbei handelt es sich um einen ähnlichen Ausdruck für die Funktionswerte wie bei der Mc-Laurin-Entwicklung der Funktion $f(x)= \sqrt{(x+1)}$ um $x_0 = 0$. Der Unterschied besteht nur darin, dass die Funktion auf der x-Achse verschoben wurde. Der Konvergenzradius kann damit direkt übernommen werden, da dieser nur von den Koeffezienten der Potenzreihe abhängt und diese sich bei Verschiebung und anschließender Entwicklungstelleanpassung nicht verändern.
+\end{document}

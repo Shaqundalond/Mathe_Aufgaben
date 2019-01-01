@@ -1,0 +1,61 @@
+\documentclass[18pt,a4paper]{article}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[left=2cm, top=3cm, right=2cm, bottom=1.5cm]{geometry}
+%\usepackage[yyyymmdd]{datetime}
+%\renewcommand{\dateseparator}{}
+%\usepackage{datetime2}
+
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+\fancyhead[L]{Reihen} %Kopfzeile links
+\fancyhead[C]{Fabian Pfaff} %zentrierte Kopfzeile
+\fancyhead[R]{\today} %Kopfzeile rechts
+\fancyfoot[L]{Reihen}
+\fancyfoot[C]{\thepage} %Seitennummer
+\fancyfoot[R]{\today}
+\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+
+\begin{document}
+\section*{Aufgabe 11b}
+Bestimmen Sie die Taylor-Reihe von $f(x)=(x\cdot\ln(x))^2$ um die Stelle $x_0 = 1$ bis zum Grad 2.\\
+Bestimmen Sie den Unterschied von $f(x)$ und dieser Näherung and der Stelle $x=1,1$
+\begin{equation}
+T_2f(x;x_0)= \sum_{n=0}^{2}\frac{f^{(n)}(x_0)}{n!} \cdot (x-x_0)^n \qquad\forall x,x_0 \in \mathbb{C}
+\end{equation}
+$x_0$ ist hierbei die Entwicklungsstelle. In der Mathemathik wird gerne $x_0$ verwendet um eine beliebige Zahl zu verwenden, die aber konstant bleibt
+\subsection*{Ableitungen}
+\begin{multline*}
+\\
+f^{(0)}(x)=(x\cdot\ln(x))^2\\
+f^{(0)}(1)= (1\cdot\ln(1))^2 = 0\\
+\\
+f^{(1)}(x) = 2(x\cdot ln(x))\cdot(\ln(x)+1) = 2x\cdot\ln^2(x)+ 2x\cdot \ln(x)\\
+f^{(1)}(1) = 2\cdot1\cdot\ln^2(1)+ 2\cdot 1\cdot \ln(1) = 0\\
+\\
+f^{(2)}(x) = 2\cdot\ln^2(x) + 4 x\cdot\ln^2(x) \cdot \frac{1}{x} + 2\cdot ln(x) + 2 =  2\cdot\ln^2(x) +  6 x \cdot\ln(x) + 2\\
+f^{(2)}(1) = 2\cdot\ln^2(1) +  6\cdot 1 \cdot\ln(1) + 2 = 2\\
+\end{multline*}
+\subsection*{Taylor-Reihe}
+Nun setzen wir die Ergebnisse der Ableitungen in Gleichung 1 ein und erhalten folgenden Ausdruck
+\begin{equation*}
+T_2f(x;1)= \frac{0}{0!}(x-1)^0 + \frac{0}{1!}(x-1)^1 + \frac{2}{2!}(x-1)^2 = (x-1)^2
+\end{equation*}
+\subsection*{absoluter Fehler}
+Berechne$f(1,1) - T_2f(1,1;1)$\\
+\begin{multline*}
+\\
+f(1,1) \approx 0,011\\
+T_2f(1,1;1) = 0,01\\
+\Rightarrow f(1,1) - T_2f(1,1;1) \approx 0,001\\
+\end{multline*}
+Dies entspricht einem relativen Fehler von ca 10\%
+\end{document}
