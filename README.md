@@ -13,9 +13,9 @@ eingeschlichen haben bitte bei mir melden.
 
 #### Analysis Aufgaben 17.12.2018
 
--[ ] Reihen Aufgabe 10 <br />
--[ ] Reihen Aufgabe 11b <br />
--[ ] Reihen Aufgabe 15 <br />
+-[x] [Reihen Aufgabe 10](/Analysis/pdf/Reihen/Aufgabe10.pdf) *hochgeladen am: 01.01.2019* <br />
+-[x] [Reihen Aufgabe 11b](/Analysis/pdf/Reihen/Aufgabe11b.pdf) *hochgeladen am: 01.01.2019* <br />
+-[x] [Reihen Aufgabe 15](/Analysis/pdf/Reihen/Aufgabe15.pdf) *hochgeladen am: 01.01.2019* <br />
 
 ## vergangene Aufgaben
 
