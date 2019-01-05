@@ -13,9 +13,10 @@ eingeschlichen haben bitte bei mir melden.
 
 #### Analysis Aufgaben 17.12.2018
 
--[x] [Reihen Aufgabe 10](/Analysis/pdf/Reihen/Aufgabe10.pdf) *hochgeladen am: 01.01.2019* <br />
+-[x] [Reihen Aufgabe 10](/Analysis/pdf/Reihen/Aufgabe10.pdf) *hochgeladen am: 01.01.2019*  <br />
 -[x] [Reihen Aufgabe 11b](/Analysis/pdf/Reihen/Aufgabe11b.pdf) *hochgeladen am: 01.01.2019* <br />
--[x] [Reihen Aufgabe 15](/Analysis/pdf/Reihen/Aufgabe15.pdf) *hochgeladen am: 01.01.2019* <br />
+-[x] [Reihen Aufgabe 15](/Analysis/pdf/Reihen/Aufgabe15.pdf) *hochgeladen am: 01.01.2019* updated am: *05.01.2019 * <br />
+Fehler bei Aufgabe 15. Ich habe die zweite Ableitung unsauber gemacht und nicht weiter überprüft da mir egal war was genau vor ln(x) steht da das für x=1 zu null wird.
 
 ## vergangene Aufgaben
 
