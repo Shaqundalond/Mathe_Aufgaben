@@ -1,0 +1,82 @@
+\documentclass[18pt,4paper]{article}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=1.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{sidecap}
+\usepackage{polynom}
+\polyset{style=C}
+\pagestyle{fancy}%eigenerSeitenstil
+\fancyhf{}%alleKopf-undFußzeilenfelderbereinigen
+\fancyhead[L]{Differenzialrechnung-Funktionen}%Kopfzeilelinks
+\fancyhead[C]{FabianPfaff}%zentrierteKopfzeile
+\fancyhead[R]{\today}%Kopfzeilerechts
+\fancyfoot[L]{Differenzialrechnung-Funktionen}%Fußzeilelinks
+\fancyhead[C]{FabianPfaff}%zentrierteKopfzeile
+\fancyfoot[C]{\thepage}%Seitennummer
+\fancyfoot[R]{\today}
+\renewcommand{\footrulewidth}{0.4pt}%untereTrennlinie
+
+\begin{document}
+\section*{Aufgabe2}
+Zerlegen Sie jeweils in Linearfaktoren
+\subsection*{b)}
+\begin{equation*}
+	b(x) = -x^4-\frac{16}{3}x^3-17x^2-12x+\frac{52}{3}
+\end{equation*}
+Man beachte, dass der erste koeffizient ungleich 1 ist. Nachdem alle Nullstellen berechnet wurden muss man noch mit diesem Koeffizienten multiplizieren um auf die Ausgangsfunktion zu kommen.
+\subsubsection*{Polynomdivision}
+Für die Polynomdivision teilt man das Polynom durch die bekannten Nullstellen.
+
+\[\polylongdiv{-x^4 - \frac{16}{3}x^3 -17x^2 - 12x+\frac{52}{3}}{x+2}\]
+\hfill
+\[\polylongdiv{-x^3-\frac{10}{3}x^2-\frac{31}{3}x+\frac{26}{3}}{x-\frac{2}{3}}\]
+
+\subsubsection*{Nullstellen quadratische Gleichung}
+Nun müssen nur noch die Nullstellen, mittels pq-Formel,  des oben erhaltenen Ausdrucks bestimmt werden.
+\begin{align*}
+	x^2 + 4x +13 = 0\\
+	\Rightarrow x_{1/2} = -\frac{4}{2} \pm \sqrt{\frac{16}{4}-13}\\
+	\quad  x_{1/2} = -2 \pm \sqrt{-9}\\
+	x_1=-2+3i\quad x_2 = -2-3i
+\end{align*}
+\subsubsection*{Linearfaktoren}
+Aus allen Nullstellen und dem ersten Vorfaktor ergibt sich folgende Zerlegung:
+\begin{equation*}
+	b(x)=-(x+2)(x-\frac{2}{3})(x-(-2+3i))(x-(-2-3i))
+\end{equation*}
+
+\newpage
+
+\subsection*{c)}
+\begin{equation*}
+	c(x) = 4x^4-4x^3-17x^2-16x+4
+\end{equation*}
+Man beachte, dass der erste koeffizient ungleich 1 ist. Nachdem alle Nullstellen berechnet wurden muss man noch mit diesem Koeffizienten multiplizieren um auf die Ausgangsfunktion zu kommen.
+\subsubsection*{Polynomdivision}
+Für die Polynomdivision teilt man das Polynom durch die bekannten Nullstellen.
+\[\polylongdiv{4x^4-4x^3+17x^2-16x+4}{x-\frac{1}{2}}\]
+\hfill
+\[\polylongdiv{4x^3-2x^2+16x-8}{x-\frac{1}{2}}\]
+
+\subsubsection*{Nullstellen quadratische Gleichung}
+Nun werden die restlichen Nullstellen bestimmt.
+\begin{align*}
+	4x^2+16=0\\
+	x^2+4=0\\
+	\Rightarrow x_1 = 2i\quad x_2=-2i
+\end{align*}
+\subsubsection*{Linearfaktoren}
+Aus allen Nullstellen und dem ersten Vorfaktor ergibt sich folgende Zerlegung:
+\begin{equation*}
+	c(x)=4(x-\frac{1}{2})^2(x-2i)(x+2i)
+\end{equation*}
+\end{document}
+
