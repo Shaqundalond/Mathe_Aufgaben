@@ -3,7 +3,7 @@
 __Analysis__ | __Theo. Inf.__
 ------------ |-------------
 Funktionen Aufgabe 1b,d,f | Übungsblatt 1
-Funktionen Aufgabe 2b,c| wohldefiniertheit Addition/Multiplikation
+Funktionen Aufgabe 2b,c| Wohldefiniertheit Addition/Multiplikation
 Stetigkeit Aufgabe 1   |
 
 #### Theo. Inf 10.12.2018
@@ -13,9 +13,10 @@ Mir ist ein Fehler in der Aufgabe 5 unterlaufen. Ich habe ihn korrigiert und die
 eingeschlichen haben bitte bei mir melden.
 
 #### Analysis Aufgaben 07.01.2019
--[x] [Funktionen Aufgabe 1](/Analysis/pdf/Differentialrechnung/Funktionen/Aufgabe1.pdf) *hochgeladen am: 01.01.2019*  <br />
--[x] [Funktionen Aufgabe2](/Analysis/pdf/Differentialrechnung/Funktionen/Aufgabe2.pdf) *hochgeladen am: 01.01.2019* <br />
--[x] [Stetigkeit Aufgabe 1](/Analysis/pdf/Differentialrechnung/Stetigkeit/Aufgabe1.pdf) *hochgeladen am: 01.01.2019* updated am: *05.01.2019 * <br />
+-[x] [Funktionen Aufgabe1](/Analysis/pdf/Differentialrechnung/Funktionen/Aufgabe1.pdf) *hochgeladen am:10.01.2019*  <br />
+-[x] [Funktionen Aufgabe 2](/Analysis/pdf/Differentialrechnung/Funktionen/Aufgabe2.pdf)*hochgeladen am: 10.01.2019* <br />
+-[x] [Stetigkeit
+Aufgabe1](/Analysis/pdf/Differentialrechnung/Stetigkeit/Aufgabe1.pdf)*hochgeladen am:10.01.2019*<br />
 
 
 ## vergangene Aufgaben
