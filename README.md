@@ -6,6 +6,9 @@ Funktionen Aufgabe 1b,d,f | Übungsblatt 1
 Funktionen Aufgabe 2b,c| Wohldefiniertheit Addition/Multiplikation
 Stetigkeit Aufgabe 1   |
 
+#### Theo. Inf 10.01.2018
+-[x] [WohldefiniertheitAddition/Multiplikation](/theoretische%20Informatik/pdf/Beweis_Wohldefiniertheit.pdf)*hochgeladen am: 10.01.2018* <br />
+
 #### Theo. Inf 10.12.2018
 
 -[x] [Übungsblatt 1](/theoretische%20Informatik/pdf/%C3%9Cbungsblatt1.pdf) *hochgeladen am: 14.12.2018* updated am: *18.12.2018*<br />
