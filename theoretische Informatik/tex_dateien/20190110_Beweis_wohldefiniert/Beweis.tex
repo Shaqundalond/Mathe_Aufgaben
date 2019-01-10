@@ -1,0 +1,71 @@
+\documentclass[18pt, 4paper]{article}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+\usepackage[left=2cm, top=2cm, right=2cm, bottom=1.5cm]{geometry}
+
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+\fancyhead[L]{Theoretische Informatik} %Kopfzeile links
+\fancyhead[C]{Fabian Pfaff} %zentrierte Kopfzeile
+\fancyhead[R]{\today} %Kopfzeile rechts
+\fancyfoot[L]{Theoretische Informatik}%Fußzeile links
+\fancyhead[C]{Fabian Pfaff} %zentrierte Kopfzeile
+\fancyfoot[C]{\thepage} %Seitennummer
+\fancyfoot[R]{\today}
+\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+
+\begin{document}
+\section*{Wohldefiniertheit der Mulltiplikation und Addition auf $\mathbb{Q}$}
+Es seien M eine Menge und R eine Äquivalnzrelation wiefolgt:
+\begin{align*}
+	M:=&\left(\mathbb{Z} \times \mathbb{Z}\setminus\{0\}\right)\\
+	R:=&\left\{\left(\left(a,b\right),\left(c,d\right)\right) \in M \times M \quad |\quad a \cdot d = c \cdot b  \right\}
+\end{align*}
+Auf der Relation sind folgende Operationen definiert:
+\begin{align*}
+	\frac{m}{n} \cdot \frac{o}{p} &:= \frac{m \cdot n}{n \cdot p}\\
+	\hfill\\
+	\frac{m}{n} + \frac{o}{p} &:= \frac{m \cdot p + o \cdot n}{n \cdot p}
+\end{align*}
+Es seien $m_1,m_2,o_1,o_2 \in \mathbb{Z}$ und $n_1,n_2,p_1,p_2 \in \mathbb{Z}\setminus\{0\}$ beliebig. und für die nächsten Abschnitte so definiert.\\
+Zeigen sie die Operationen sind wohldefiniert.
+\subsubsection*{Multiplikation}
+Aus $[(m_1,n_1)]_R = [(m_2,n_2)]_R$ und $[(o_1,p_1)]_R = [(o_2,p_2)]_R$ folgt $[(m_1 \cdot o_1,n_1 \cdot p_1)]_R = [(m_2 \cdot o_2,n_2 \cdot p_2)]_R$\\
+Aus den Implikationen ergeben sich folgende Gleichungen.
+\begin{align}
+	m_1 \cdot n_2 &= m_2 \cdot n_1\\
+	o_1 \cdot p_2 &= o_2 \cdot p_1
+\end{align}
+\begin{align*}
+	&&m_1 \cdot n_2 &= m_2 \cdot n_1\qquad| \cdot(o_1\cdot p_2)\\
+	&\Leftrightarrow& m_1 \cdot n_2 \cdot o_1\cdot p_2&= m_2 \cdot n_1\cdot o_1\cdot p_2\\
+	&\stackrel{\text{(2)}}{\Rightarrow}&m_1 \cdot n_2 \cdot o_1\cdot p_2&= m_2 \cdot n_1\cdot o_2\cdot p_1\\
+	&\Leftrightarrow&m_1 \cdot o_1 \cdot n_2\cdot p_2&= m_2 \cdot o_2\cdot n_1\cdot p_1\\
+	&\Leftrightarrow&[(m_1 \cdot o_1,n_1 \cdot p_1)]_R = [(m_2 \cdot o_2,n_2 \cdot p_2)]_R
+\end{align*}
+\subsubsection*{Addition}
+Aus $[(m_1,n_1)]_R = [(m_2,n_2)]_R$ und $[(o_1,p_1)]_R = [(o_2,p_2)]_R$ folgt $[(m_1 \cdot p_1+o_1 \cdot n_1,n_1 \cdot p_1)]_R = [(m_2 \cdot p_2+ o_2 \cdot n_2,n_2 \cdot p_2)]_R$\\
+Aus den Implikationen ergeben sich folgende Gleichungen.
+\begin{align}
+	m_1 \cdot n_2 &= m_2 \cdot n_1\\
+	o_1 \cdot p_2 &= o_2 \cdot p_1
+\end{align}
+Zunächst passen wir die Gleichungen an
+\begin{align*}
+	m_1 \cdot n_2 &= m_2 \cdot n_1\qquad| \cdot(p_1\cdot p_2)&o_1 \cdot p_2 &= o_2 \cdot p_1\qquad| \cdot(n_1\cdot n_2)\\
+	m_1 \cdot n_2 \cdot p_1\cdot p_2&= m_2 \cdot n_1\cdot p_2\cdot p_1&o_1 \cdot p_2 \cdot n_1\cdot n_2&= o_2 \cdot p_1\cdot n_2\cdot n_1\\
+	m_1 \cdot p_1 \cdot p_2\cdot n_2&= m_2 \cdot p_2\cdot n_2\cdot p_1&o_1 \cdot n_1 \cdot p_2\cdot n_2&= o_2 \cdot n_2\cdot n_1\cdot p_1\\
+\end{align*}
+Nun addieren wir beide Gleichungen und erhalten folgende Gleichung
+\begin{align*}
+	&&m_1 \cdot p_1 \cdot p_2\cdot n_2 + o_1 \cdot n_1 \cdot p_2\cdot n_2 &= m_2 \cdot p_2\cdot n_2\cdot p_1 +  o_2 \cdot n_2\cdot n_1\cdot p_1\\
+	&\Leftrightarrow& (m_1 \cdot p_1 + o_1 \cdot n_1) \cdot p_2\cdot n_2 &= (m_2 \cdot p_2 +  o_2 \cdot n_2) \cdot n_1\cdot p_1\\
+	&\Leftrightarrow&	[(m_1 \cdot p_1+o_1 \cdot n_1,n_1 \cdot p_1)]_R &= [(m_2 \cdot p_2+ o_2 \cdot n_2,n_2 \cdot p_2)]_R
+\end{align*}
+\end{document}
