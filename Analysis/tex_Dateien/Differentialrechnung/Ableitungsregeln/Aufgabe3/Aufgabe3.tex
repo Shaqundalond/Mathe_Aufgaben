@@ -1,0 +1,58 @@
+\documentclass[18pt, 4paper]{article}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+\usepackage[left=2cm, top=2cm, right=2cm, bottom=1.5cm]{geometry}
+
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+\fancyhead[L]{Differenzialrechnung-Funktionen} %Kopfzeile links
+\fancyhead[C]{Fabian Pfaff} %zentrierte Kopfzeile
+\fancyhead[R]{\today} %Kopfzeile rechts
+\fancyfoot[L]{Differenzialrechnung-Funktionen} %Fußzeile links
+\fancyhead[C]{Fabian Pfaff} %zentrierte Kopfzeile
+\fancyfoot[C]{\thepage} %Seitennummer
+\fancyfoot[R]{\today}
+\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+
+\begin{document}
+\section*{Aufgabe 3 Kettenregel}
+Bestimmen Sie die Ableitungen der Funktionen.\\
+Die Kettenregel lautet:
+\begin{equation*}
+	\left(u(v)\right)' = u'(v)\cdot v'
+\end{equation*}
+\begin{align*}
+	f_1(x) &= (2-3x)^5\\
+	f_1^{'}(x) &= 5(2-3x)^4\cdot3\\
+	f_1^{'}(x) &= 15(2-3x)^4\\
+\end{align*}
+\hfill\\
+\begin{align*}
+	f_2(x) &= \ln(\sqrt{x})\\
+	f_2^{'}(x) &= \frac{1}{\sqrt{x}} \cdot \frac{1}{2\sqrt{x}}\\
+	f_2^{'}(x) &= \frac{1}{2x}\\
+\end{align*}
+\hfill\\
+\begin{align*}
+	f_3(x) &= \sqrt{\ln(x)}\\
+	f_1^{'}(x) &= \frac{1}{2\sqrt{\ln(x)}} \cdot \frac{1}{x}\\
+\end{align*}
+\begin{align*}
+	f_4(x) &= a \cdot \sqrt{b - c\cdot x}= a\cdot(b - c\cdot x)^{\frac{1}{n}}\\
+	f_4{'}(x) &= \frac{a}{n} \cdot (b- c\cdot x)^{\frac{1-n}{n}} \cdot (-c)\\
+	f_4{'}(x) &= \frac{-ac}{n \cdot (b- c\cdot x)^{\frac{n-1}{n}}}\\
+\end{align*}
+\begin{align*}
+	f_5(x) &= \left(f(x)\right)^n\\
+	f_5^{'}(x) &= n \cdot \left(f(x)\right)^{n-1} \cdot f^{'}(x)\\
+\end{align*}
+\
+
+\end{document}
+

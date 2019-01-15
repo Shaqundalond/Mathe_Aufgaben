@@ -1,0 +1,59 @@
+\documentclass[18pt, 4paper]{article}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+\usepackage[left=2cm, top=2cm, right=2cm, bottom=1.5cm]{geometry}
+
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+\fancyhead[L]{Differenzialrechnung-Funktionen} %Kopfzeile links
+\fancyhead[C]{Fabian Pfaff} %zentrierte Kopfzeile
+\fancyhead[R]{\today} %Kopfzeile rechts
+\fancyfoot[L]{Differenzialrechnung-Funktionen} %Fußzeile links
+\fancyhead[C]{Fabian Pfaff} %zentrierte Kopfzeile
+\fancyfoot[C]{\thepage} %Seitennummer
+\fancyfoot[R]{\today}
+\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+
+\begin{document}
+\section*{Aufgabe 5 L'Hôpital}
+Bestimmen Sie den Grenzwert mit L'Hôpital\\
+Die Regel von L'Hôpital lautet:
+\begin{equation*}
+	\lim_{x \to x_0}\frac{f(x)}{g(x)} = \lim_{x \to x_0}\frac{f^{'}(x)}{g^{'}(x)}= \dots
+\end{equation*}
+\begin{align*}
+	\quad \lim_{x \to 0}& \frac{\sin(x)}{x}= \frac{0}{0}	&
+	\quad \lim_{x \to 0}& \frac{\sin(3x)}{x}= \frac{0}{0}	&
+	\quad \lim_{x \to 0}& \frac{\ln(x)}{x^r}= \frac{-\infty}{0}\\
+	\xRightarrow{\text{LH}} \lim_{x \to 0}& \frac{\cos(x)}{1}=1	&
+	\xRightarrow{\text{LH}} \lim_{x \to 0}& \frac{3\cos(3x)}{1}=3	&
+	\xRightarrow{\text{LH}} \lim_{x \to 0}& \frac{\frac{1}{x}}{rx^{r-1}}=\frac{1}{rx^r}=\infty\\
+\end{align*}
+
+\begin{align*}
+	\lim_{x \to x^+} x^x &= 0^0\\
+	\intertext{Aus $0^0$ ist keine Aussage möglich. Wenn wir jedoch die Funktion anders hinschreiben ist eine Aussage möglich}
+	x^x &= id \circ x^x\\
+	x^x &= f \circ f^{-1} \circ x^x\\
+	x^x &= \exp(\ln(x^x))\\
+	x^x &= e^{\ln\left(x^x\right)}\\
+	x^x &= e^{x\ln(x)}\\
+	\intertext{von diesem Ausdruck kann man nun den Grenzwert berechnen}
+	\Rightarrow \lim_{x \to x^+}x^x &= \lim_{x \to x^+}e^{x\ln(x)}\\
+	\intertext{Da die Exponentialfunktion eine stetige Funktion ist und stetige Funktionen den Grenzwert erhalten, können wir "lim" in den Exponenten schreiben und den Grenzwer von $x\ln(x)$ betrachten}
+	\lim_{x \to x^+}e^{x\ln(x)} &= \exp(\lim_{x \to x^+}x\ln(x))\\
+	\Rightarrow  \lim_{x \to x^+}x\ln(x) &=  \lim_{x \to x^+}\frac{\ln(x)}{x^{-1}}= \frac{-\infty}{\infty}\\
+	\xRightarrow{\text{LH}} \lim_{x \to 0^+}\frac{\frac{1}{x}}{\frac{-1}{x^2}}&=\lim_{x \to 0^+}\frac{x}{-1} = 0\\
+	\Rightarrow \lim_{x \to 0^+}x^x &= \lim_{x \to 0^+}e^{x\ln(x)}= e^0 = 1
+\end{align*}
+\end{document}
+
+
+

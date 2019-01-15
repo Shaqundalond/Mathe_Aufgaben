@@ -1,0 +1,55 @@
+\documentclass[18pt, 4paper]{article}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+\usepackage[left=2cm, top=2cm, right=2cm, bottom=1.5cm]{geometry}
+
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+\fancyhead[L]{Differenzialrechnung-Ableitungsregeln} %Kopfzeile links
+\fancyhead[C]{Fabian Pfaff} %zentrierte Kopfzeile
+\fancyhead[R]{\today} %Kopfzeile rechts
+\fancyfoot[L]{Differenzialrechnung-Ableitungsregeln} %Fußzeile links
+\fancyfoot[C]{\thepage} %Seitennummer
+\fancyfoot[R]{\today}
+\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+
+\begin{document}
+\section*{Aufgabe1}
+Bestimmen Sie die Ableitung der Funktionen
+
+\subsection*{1}
+\begin{align*}
+	f(x)&=x^{\sin(x)}\\
+	f(x)&= e^{\ln(x^{\sin(x)})}\\
+	f(x)&= e^{\sin(x) \cdot \ln(x)}\\
+	\Rightarrow f'(x)&= e^{\sin(x) \cdot \ln(x)}\cdot \left(\cos(x)\cdot \ln(x) + \frac{\sin(x)}{x}\right)\\
+	f'(x)&= x^{sin(x)}\cdot \left(\cos(x)\cdot \ln(x) + \frac{\sin(x)}{x}\right)
+\end{align*}
+
+\subsection*{2}
+\begin{align*}
+	f(x)&=\left(1+\frac{1}{x}\right)^x\\
+	f(x)&= e^{x\cdot\ln\left(1+\frac{1}{x}\right)}\\
+	\Rightarrow f'(x)&= e^{x\cdot\ln\left(1+\frac{1}{x}\right)}\cdot
+	\left(
+		\ln\left(1+\frac{1}{x}\right) +
+		x \cdot \frac{1}{1+ \frac{1}{x}} \cdot (-1) \cdot \frac{1}{x^2}
+	\right)\\
+	f'(x)&=\left(1+\frac{1}{x}\right)^x\cdot
+	\left(
+		\ln\left(1+\frac{1}{x}\right) +
+		x \cdot \frac{x}{x+1} \cdot (-1) \cdot \frac{1}{x^2}
+	\right)\\
+	f'(x)&=\left(1+\frac{1}{x}\right)^x\cdot
+	\left(
+		\ln\left(1+\frac{1}{x}\right) -
+		\frac{1}{x+1}
+	\right)
+\end{align*}
+\end{document}
+

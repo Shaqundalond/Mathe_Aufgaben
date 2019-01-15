@@ -1,0 +1,56 @@
+\documentclass[18pt, 4paper]{article}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+\usepackage[left=2cm, top=2cm, right=2cm, bottom=1.5cm]{geometry}
+
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+\fancyhead[L]{Differenzialrechnung-Funktionen} %Kopfzeile links
+\fancyhead[C]{Fabian Pfaff} %zentrierte Kopfzeile
+\fancyhead[R]{\today} %Kopfzeile rechts
+\fancyfoot[L]{Differenzialrechnung-Funktionen} %Fußzeile links
+\fancyhead[C]{Fabian Pfaff} %zentrierte Kopfzeile
+\fancyfoot[C]{\thepage} %Seitennummer
+\fancyfoot[R]{\today}
+\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+
+\begin{document}
+\section*{Aufgabe 2 Quotientenregel}
+Bestimmen Sie die Ableitungen der Funktionen.\\
+Die Quotienregel lautet:
+\begin{equation*}
+	\left(\frac{u}{v}\right)' = \frac{u'\cdot v - u \cdot v'}{v^2}
+\end{equation*}
+\subsection*{1}
+\begin{align*}
+	f_1(x) &= \frac{\ln(x)}{\sqrt{x}}\\
+	f_1^{'}(x) &= \frac{\frac{1}{x}\cdot \sqrt{x}- \ln(x)\cdot \frac{1}{2\sqrt{x}}}{x}\\
+		 &= \frac{\frac{\sqrt{x}}{x}- \frac{\ln(x)}{2\sqrt{x}}}{x}\\
+		 &= \frac{\frac{2-\ln(x)}{2\sqrt{x}}}{x}\\
+	f_1^{'}(x) &= \frac{2-\ln(x)}{2x^{3/2}}
+\end{align*}
+\subsection*{2}
+\begin{align*}
+	f_2(x) &= \frac{2\cos(x)-3\sin(x)}{5(1+x^2)}\\
+	f_2^{'}(x) &= \frac{(-2\sin(x)-3\cos(x))(5(1+x^2))-(2\cos(x)-3\sin(x))(5\cdot 2x)}{5^2(1+x^2)^2}\\
+	\intertext{Ab hier kann die Aufgabe schon als erledigt angesehen werden. Man kann aber noch weiter vereinfachen}
+	f_2^{'}(x) &= \frac{(-2\sin(x)-3\cos(x))(1+x^2)-(2\cos(x)-3\sin(x))(2x)}{5(1+x^2)^2}\\
+		 &= \frac{-2\sin(x) -2x^2\sin(x)+6x\sin(x) -3\cos(x)-3x^2\cos(x)-4x\cos(x)}{5(1+x^2)^2}\\
+	f_2^{'}(x) &= -\frac{\sin(x)(2x^2-6x+2)+\cos(x)(3x^2+4x+3)}{5(1+x^2)^2}
+\end{align*}
+\subsection*{3}
+\begin{align*}
+	f_3(x) &= \frac{1+\sqrt{x}}{\sqrt{x}}\\
+	f_1^{'}(x) &= \frac{\frac{1}{2\sqrt{x}} \cdot \sqrt{x} -(1+\sqrt{x})\cdot \frac{1}{2\sqrt{x}}}{x}\\
+		 &= \frac{\frac{1}{1}- (\frac{1}{2\sqrt{x}}+\frac{1}{2})}{x}\\
+	f_1^{'}(x) &= -\frac{1}{2x^{3- /2}}
+\end{align*}
+
+\end{document}
+

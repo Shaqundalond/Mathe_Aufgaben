@@ -2,18 +2,25 @@
 ## Aktuelle Aufgaben
 __Analysis__ | __Theo. Inf.__
 ------------ |-------------
-Funktionen Aufgabe 1b,d,f | Übungsblatt 1
-Funktionen Aufgabe 2b,c| Wohldefiniertheit Addition/Multiplikation
-Stetigkeit Aufgabe 1   |
+Ableitungsregeln Aufgabe 2 | Wohldefiniertheit Addition/Multiplikation
+Ableitungsregeln Aufgabe 3|
+Ableitungsregeln Aufgabe 6 |
+Ableitungsregeln Aufgabe L'Hôpital |
 
 #### Theo. Inf 10.01.2018
 -[x] [WohldefiniertheitAddition/Multiplikation](/theoretische%20Informatik/pdf/Beweis_Wohldefiniertheit.pdf)*hochgeladen am: 10.01.2018* <br />
 
-#### Theo. Inf 10.12.2018
 
--[x] [Übungsblatt 1](/theoretische%20Informatik/pdf/%C3%9Cbungsblatt1.pdf) *hochgeladen am: 14.12.2018* updated am: *18.12.2018*<br />
-Mir ist ein Fehler in der Aufgabe 5 unterlaufen. Ich habe ihn korrigiert und die Aufgabe sollte nun korrekt sein. Falls sich mir weitere Fehler
-eingeschlichen haben bitte bei mir melden.
+#### Analysis Aufgaben 14.01.2019
+-[x]
+[Ableitungsregeln Aufgabe2](/Analysis/pdf/Differentialrechnung/Ableitungsregeln/Aufgabe2.pdf)
+*hochgeladen am:15.01.2019*  <br />
+-[x] [Ableitungsregeln Aufgabe3](/Analysis/pdf/Differentialrechnung/Ableitungsregeln/Aufgabe3.pdf)*hochgeladen am: 15.01.2019* <br />
+-[x] [Ableitungsregeln Aufgabe6](/Analysis/pdf/Differentialrechnung/Ableitungsregeln/Aufgabe2.pdf)*hochgeladen am: 15.01.2019* <br />
+-[x] [Ableitungsregeln L'Hopital](/Analysis/pdf/Differentialrechnung/Ableitungsregeln/LHopital.pdf)*hochgeladen am: 15.01.2019* <br />
+
+
+## vergangene Aufgaben
 
 #### Analysis Aufgaben 07.01.2019
 -[x] [Funktionen Aufgabe1](/Analysis/pdf/Differentialrechnung/Funktionen/Aufgabe1.pdf) *hochgeladen am:10.01.2019*  <br />
@@ -22,7 +29,11 @@ eingeschlichen haben bitte bei mir melden.
 Aufgabe1](/Analysis/pdf/Differentialrechnung/Stetigkeit/Aufgabe1.pdf)*hochgeladen am:10.01.2019*<br />
 
 
-## vergangene Aufgaben
+#### Theo. Inf 10.12.2018
+
+-[x] [Übungsblatt 1](/theoretische%20Informatik/pdf/%C3%9Cbungsblatt1.pdf) *hochgeladen am: 14.12.2018* updated am: *18.12.2018*<br />
+Mir ist ein Fehler in der Aufgabe 5 unterlaufen. Ich habe ihn korrigiert und die Aufgabe sollte nun korrekt sein. Falls sich mir weitere Fehler
+eingeschlichen haben bitte bei mir melden.
 
 #### Analysis Aufgaben 17.12.2018
 
